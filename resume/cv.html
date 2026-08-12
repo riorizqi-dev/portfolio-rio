@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rio Rizqi Saputra — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0F172A; --blue:#2563EB; --white:#FFF; --gray:#F3F4F6; --text:#1E293B; --text-light:#64748B; }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family:'Poppins',sans-serif;
+    background:#E2E8F0;
+    display:flex; justify-content:center; align-items:center;
+    min-height:100vh; padding:20px;
+  }
+
+  .page {
+    width:210mm; height:297mm;
+    background:var(--white);
+    display:flex;
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+    overflow:hidden;
+  }
+
+  .sidebar {
+    width:30%; background:var(--navy); color:var(--white);
+    padding:16px 18px; display:flex; flex-direction:column; gap:14px; flex-shrink:0;
+  }
+
+  .photo-wrap {
+    display:block; text-align:center; margin:8px 0 4px;
+  }
+  .photo {
+    width:100px; height:100px; border-radius:50%;
+    border:2px solid var(--blue); object-fit:cover; object-position:center top;
+    display:inline-block; background:#1E293B;
+  }
+
+  .sidebar h3 {
+    font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:1.5px;
+    color:#94A3B8; margin-bottom:7px; padding-bottom:5px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+
+  .contact-list { list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .contact-list li { font-size:9px; color:#CBD5E1; display:flex; align-items:center; gap:6px; word-break:break-all; }
+  .contact-list .icon { width:14px; text-align:center; flex-shrink:0; font-size:10px; }
+
+  .tech-tags { display:flex; flex-wrap:wrap; gap:4px; }
+  .tech-tags span { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); font-size:7.5px; padding:2px 6px; border-radius:3px; color:#CBD5E1; }
+
+  .sidebar p { font-size:8.5px; color:#CBD5E1; line-height:1.4; }
+
+  .lang-item { display:flex; justify-content:space-between; font-size:8.5px; color:#CBD5E1; margin-bottom:3px; }
+  .lang-item .level { color:#64748B; font-size:7.5px; }
+
+  .content {
+    width:70%; padding:16px 22px; display:flex; flex-direction:column; gap:10px;
+  }
+
+  .header h1 {
+    font-family:'League Spartan',sans-serif; font-weight:800; font-size:28px;
+    color:var(--navy); line-height:1; letter-spacing:-0.5px;
+  }
+  .header .role { font-size:11px; font-weight:500; color:var(--blue); letter-spacing:1px; text-transform:uppercase; margin-top:2px; }
+
+  .section h3 {
+    font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:1px;
+    color:var(--navy); padding-bottom:4px; border-bottom:2px solid var(--blue); margin-bottom:5px;
+  }
+
+  .section p { font-size:8.5px; color:var(--text); line-height:1.5; }
+
+  .project-item { margin-bottom:5px; }
+  .project-item .proj-head { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; }
+  .project-item .proj-name { font-size:9.5px; font-weight:600; color:var(--text); }
+  .project-item .proj-tech { font-size:7px; color:var(--blue); font-weight:500; }
+  .project-item ul { list-style:none; padding-left:0; margin-top:1px; }
+  .project-item ul li { font-size:8px; color:var(--text-light); line-height:1.4; padding-left:8px; position:relative; }
+  .project-item ul li::before { content:'•'; position:absolute; left:1px; color:var(--blue); font-size:7px; line-height:1.4; }
+
+  .edu-item .edu-school { font-size:9.5px; font-weight:600; color:var(--text); }
+  .edu-item .edu-detail { font-size:8px; color:var(--text-light); }
+
+  .skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:5px; }
+  .skills-grid .skill-cat { font-size:8px; font-weight:600; color:var(--navy); margin-bottom:1px; }
+  .skills-grid .skill-list { font-size:7.5px; color:var(--text-light); line-height:1.6; }
+
+  .soft-skills { display:flex; flex-wrap:wrap; gap:3px; }
+  .soft-skills span { background:var(--gray); font-size:7.5px; padding:2px 8px; border-radius:4px; color:var(--text); }
+
+  @media print {
+    body { background:white; padding:0; }
+    .page { box-shadow:none; width:210mm; height:297mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="photo-wrap"><img class="photo" src="photo.jpg" alt="Rio Rizqi Saputra" /></div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul class="contact-list">
+        <li><span class="icon">📞</span> +62 857-7128-9279</li>
+        <li><span class="icon">📧</span> riorizqi918@gmail.com</li>
+        <li><span class="icon">📍</span> Jakarta, Indonesia</li>
+        <li><span class="icon">💻</span> github.com/riorizqi-dev</li>
+        <li><span class="icon">🌐</span> portfolio-rio-green.vercel.app</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Tech Stack</h3>
+      <div class="tech-tags">
+        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+        <span>TypeScript</span><span>React</span><span>Next.js</span>
+        <span>PHP</span><span>Laravel</span><span>Tailwind CSS</span>
+        <span>Bootstrap</span><span>REST API</span><span>MySQL</span>
+        <span>Supabase</span><span>Git</span><span>GitHub</span>
+        <span>VS Code</span><span>Figma</span><span>Vercel</span>
+      </div>
+    </div>
+
+    <div>
+      <h3>Languages</h3>
+      <div class="lang-item"><span>Indonesian</span><span class="level">Native</span></div>
+      <div class="lang-item"><span>English</span><span class="level">Intermediate</span></div>
+    </div>
+
+    <div>
+      <h3>Interests</h3>
+      <p>Web Development · UI/UX Design · AI · Open Source · Technology</p>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="header">
+      <h1>RIO RIZQI<br>SAPUTRA</h1>
+      <div class="role">Junior Web Developer</div>
+    </div>
+
+    <div class="section">
+      <h3>About Me</h3>
+      <p>
+        Software Engineering (RPL) student at SMKN 17 Jakarta passionate about building responsive, modern web applications. Experienced with HTML, CSS, JavaScript, TypeScript, React, Next.js, PHP, Laravel, MySQL, and Supabase. Fast learner, detail-oriented, and eager to contribute to a professional development team.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Featured Projects</h3>
+
+      <div class="project-item">
+        <div class="proj-head">
+          <span class="proj-name">Restaurant Management System</span>
+          <span class="proj-tech">Laravel · PHP · MySQL · Tailwind</span>
+        </div>
+        <ul>
+          <li>Order management, sales reports, authentication & admin dashboard with role-based access</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-head">
+          <span class="proj-name">School Canteen Ordering System</span>
+          <span class="proj-tech">Next.js · TypeScript · Supabase · Tailwind</span>
+        </div>
+        <ul>
+          <li>Online ordering with real-time order management & Supabase authentication</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-head">
+          <span class="proj-name">AI Outfit Recommendation Web App</span>
+          <span class="proj-tech">Next.js · TypeScript · Supabase · Tailwind</span>
+        </div>
+        <ul>
+          <li>AI-powered outfit recommendation with user preference storage & responsive UI</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-head">
+          <span class="proj-name">Warehouse Management System</span>
+          <span class="proj-tech">Laravel · PHP · MySQL · Tailwind</span>
+        </div>
+        <ul>
+          <li>Inventory tracking, stock monitoring, reporting system & admin dashboard</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-head">
+          <span class="proj-name">Premium Apps Marketplace</span>
+          <span class="proj-tech">Next.js · TypeScript · Supabase · Tailwind</span>
+        </div>
+        <ul>
+          <li>Digital marketplace with authentication, product catalog & responsive interface</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-head">
+          <span class="proj-name">Personal Portfolio</span>
+          <span class="proj-tech">React · TypeScript · Supabase · Tailwind · Vercel</span>
+        </div>
+        <ul>
+          <li>Dark theme portfolio with project showcase & contact form — portfolio-rio-green.vercel.app</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Education</h3>
+      <div class="edu-item">
+        <div class="edu-school">SMKN 17 Jakarta</div>
+        <div class="edu-detail">Software Engineering (RPL) · Expected Graduation: 2027</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Technical Skills</h3>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-cat">Front-End</div>
+          <div class="skill-list">HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Tailwind, Bootstrap</div>
+        </div>
+        <div>
+          <div class="skill-cat">Back-End</div>
+          <div class="skill-list">PHP, Laravel, REST API</div>
+        </div>
+        <div>
+          <div class="skill-cat">Database</div>
+          <div class="skill-list">MySQL, Supabase (PostgreSQL)</div>
+        </div>
+        <div>
+          <div class="skill-cat">Tools</div>
+          <div class="skill-list">Git, GitHub, VS Code, Figma, Vercel</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Soft Skills</h3>
+      <div class="soft-skills">
+        <span>Teamwork</span><span>Problem Solving</span><span>Critical Thinking</span>
+        <span>Communication</span><span>Adaptability</span><span>Time Management</span><span>Fast Learner</span>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>

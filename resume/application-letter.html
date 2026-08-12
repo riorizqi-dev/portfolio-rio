@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Letter — RIO RIZQI SAPUTRA</title>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0F172A; --blue:#2563EB; --white:#FFF; --text:#1E293B; --text-light:#64748B; }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family:'Poppins',sans-serif;
+    background:#E2E8F0;
+    display:flex; justify-content:center; align-items:center;
+    min-height:100vh; padding:20px;
+  }
+
+  .page {
+    width:210mm; height:297mm;
+    background:var(--white);
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+
+  .header-bar {
+    background:var(--navy);
+    color:var(--white);
+    padding:28px 36px 22px;
+    position:relative;
+  }
+  .header-bar::after {
+    content:''; position:absolute; left:0; right:0; bottom:0;
+    height:4px; background:var(--blue);
+  }
+  .header-bar h1 {
+    font-family:'League Spartan',sans-serif;
+    font-weight:800; font-size:30px; letter-spacing:-0.5px;
+  }
+  .header-bar .role { font-size:12px; font-weight:500; color:#93C5FD; letter-spacing:1.5px; text-transform:uppercase; margin-top:2px; }
+  .header-bar .contact { font-size:9.5px; color:#CBD5E1; margin-top:8px; display:flex; flex-wrap:wrap; gap:4px 18px; }
+
+  .letter {
+    flex:1; margin:24px 36px 28px;
+    padding:26px 30px;
+    border:1.5px solid var(--navy);
+    border-radius:4px;
+    font-size:11.5px; color:var(--text); line-height:1.75;
+  }
+
+  .letter .date { margin-bottom:18px; }
+  .letter .subject { font-weight:600; text-decoration:underline; margin-bottom:14px; }
+
+  .letter p { margin-bottom:12px; text-align:justify; }
+  .letter .salutation { margin-bottom:14px; }
+
+  .sign-block {
+    margin-top:26px;
+  }
+  .sign-block .closing { margin-bottom:4px; }
+  .sign-block .place-date { margin-bottom:42px; font-size:11.5px; }
+  .sign-block .name { font-weight:700; font-size:12px; }
+
+  @media print {
+    body { background:white; padding:0; }
+    .page { box-shadow:none; width:210mm; height:297mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header-bar">
+    <h1>RIO RIZQI SAPUTRA</h1>
+    <div class="role">Junior Web Developer</div>
+    <div class="contact">
+      <span>Jakarta, Indonesia</span>
+      <span>+62 857-7128-9279</span>
+      <span>riorizqi918@gmail.com</span>
+      <span>github.com/riorizqi-dev</span>
+      <span>portfolio-rio-green.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="letter">
+    <div class="date">Jakarta, August 3, 2026</div>
+
+    <p class="subject">RE : Application for Junior Web Developer</p>
+
+    <p class="salutation">
+      Dear HRD Manager<br>
+      PT Digital Indonesia<br>
+      Jakarta, Indonesia
+    </p>
+
+    <p>Dear Sir/Madam,</p>
+
+    <p>
+      I am writing to apply for the position of <b>Junior Web Developer</b> at your company.
+    </p>
+
+    <p style="padding-left:20px; margin-bottom:4px;">
+      Full Name &nbsp;&nbsp;: RIO RIZQI SAPUTRA<br>
+      Date of Birth : Jakarta, May 20, 2007<br>
+      Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Jakarta, Indonesia<br>
+      Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: +62 857-7128-9279<br>
+      Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: riorizqi918@gmail.com
+    </p>
+
+    <p>
+      I am a Software Engineering (Rekayasa Perangkat Lunak / RPL) student at SMKN 17 Jakarta with a strong passion for web development. I enjoy building responsive, modern, and user-friendly web applications using both front-end and back-end technologies.
+    </p>
+
+    <p>
+      I have hands-on experience developing projects using technologies such as <b>HTML, CSS, JavaScript, TypeScript, React, Next.js, PHP, Laravel, MySQL, and Supabase</b>. My projects include a restaurant management system, an online ordering system, a warehouse management system, and a digital app marketplace. I am comfortable working with modern frameworks, responsive design, authentication, and API integration.
+    </p>
+
+    <p>
+      I am a fast learner, detail-oriented, and able to work well both independently and in a team. I am continuously expanding my skills in full-stack development, AI, and automation to deliver relevant digital solutions for companies.
+    </p>
+
+    <p>
+      I would greatly appreciate the opportunity to join and contribute to your company. Enclosed with this letter are my CV, portfolio, and supporting documents. I look forward to the possibility of discussing my qualifications further in an interview.
+    </p>
+
+    <p>
+      Thank you for your time and consideration. I look forward to hearing from you.
+    </p>
+
+    <div class="sign-block">
+      <p class="closing">Sincerely,</p>
+      <div class="place-date">Jakarta, August 3, 2026</div>
+      <div class="name">RIO RIZQI SAPUTRA</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
