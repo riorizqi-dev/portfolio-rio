@@ -1,29 +1,6 @@
 import SectionWrapper from './SectionWrapper'
 import { siteData, techStack } from '../data'
-
-export default function TechStack() {
-  return (
-    <SectionWrapper id="stack" className="px-6 py-24 max-w-6xl mx-auto w-full">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-        {siteData.tagline.tech}
-      </h2>
-
-      <div className="mt-12 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4">
-        {techStack.map((tech) => {
-          const Icon = tech.icon
-          return (
-            <div
-              key={tech.name}
-              className="flex flex-col items-center gap-2 rounded-xl border border-white/5 bg-white/[0.02] p-4 hover:border-white/10 hover:bg-white/[0.05] transition-colors"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5">
-                <Icon />
-              </div>
-              <span className="text-[11px] text-neutral-500 text-center leading-tight">{tech.name}</span>
-            </div>
-          )
-        })}
-      </div>
-    </SectionWrapper>
-  )
-}
+export default function TechStack() { return <SectionWrapper id="stack" className="mx-auto w-full max-w-6xl border-t border-white/10 px-6 py-24">
+  <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#00ff88]">03 / the toolkit</p><h2 className="mt-5 text-5xl font-medium tracking-[-0.06em] text-white sm:text-7xl">{siteData.tagline.tech}</h2>
+  <div className="mt-14 grid grid-cols-2 gap-px border border-white/10 bg-white/10 sm:grid-cols-4 md:grid-cols-8">{techStack.map((tech) => <div data-spotlight key={tech.name} className="flex flex-col items-center gap-3 bg-[#0a0a0a] p-4 transition-colors hover:bg-[#111]"><div className="flex h-10 w-10 items-center justify-center border border-white/10 bg-[#111]"><img src={tech.icon} alt={`${tech.name} logo`} loading="lazy" className="h-6 w-6" /></div><span className="text-center font-mono text-[10px] leading-tight text-[#888]">{tech.name}</span></div>)}</div>
+</SectionWrapper> }
