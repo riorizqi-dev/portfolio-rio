@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { projects, siteData, techStack } from '../data'
 import ProjectCard from './ProjectCard'
@@ -8,4 +9,7 @@ export function AboutPage() { return <PageFrame label="04 / whoami" title="About
 
 export function ProjectDetailPage({ slug }: { slug: string }) { const project = projects.find((item) => item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug) ?? projects[0]; return <PageFrame label={`project / ${String(projects.indexOf(project) + 1).padStart(2, '0')}`} title={project.title}><div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]"><div><p className="font-mono text-sm text-[#00ff88]">{project.tags.join(' · ')}</p><p className="mt-8 text-xl leading-9 text-[#ccc]">{project.description}</p><a data-cursor href={project.github} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 border border-[#00ff88] px-5 py-3 font-mono text-xs uppercase text-[#00ff88]">View on GitHub <ArrowUpRight size={14} /></a></div><div className="terminal-panel p-6 font-mono text-sm text-[#888]"><p className="text-[#555]">// project notes</p><p className="mt-6"><span className="text-[#00ff88]">title</span> = &quot;{project.title}&quot;</p><p><span className="text-[#00ff88]">stack</span> = [{project.tags.map((tag) => `&quot;${tag}&quot;`).join(', ')}]</p><p><span className="text-[#00ff88]">source</span> = &quot;public GitHub repository&quot;</p></div></div><a href="/projects" className="mt-20 inline-flex items-center gap-2 font-mono text-xs uppercase text-[#888] hover:text-[#00ff88]"><ArrowLeft size={14} /> all projects</a></PageFrame> }
 
-function PageFrame({ label, title, children }: { label: string; title: string; children: React.ReactNode }) { return <main className="relative z-[1] mx-auto min-h-[100dvh] max-w-6xl px-6 pb-24 pt-36"><p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#00ff88]">{label}</p><h1 className="mt-5 max-w-4xl text-6xl font-medium leading-none tracking-[-0.07em] text-white sm:text-8xl">{title}</h1><div className="mt-12">{children}</div></main> }
+function PageFrame({ label, title, children }: { label: string; title: string; children: React.ReactNode }) {
+  useEffect(() => { document.title = `${title} — Rio Rizqi Saputra` }, [title])
+  return <main className="relative z-[1] mx-auto min-h-[100dvh] max-w-6xl px-6 pb-24 pt-36"><p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#00ff88]">{label}</p><h1 className="mt-5 max-w-4xl text-6xl font-medium leading-none tracking-[-0.07em] text-white sm:text-8xl">{title}</h1><div className="mt-12">{children}</div></main>
+}

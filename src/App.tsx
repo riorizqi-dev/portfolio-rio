@@ -7,7 +7,6 @@ import Footer from './components/Footer'
 import CursorField from './components/CursorField'
 import CustomCursor from './components/CustomCursor'
 import Spotlight from './components/Spotlight'
-import Chatbot from './components/Chatbot'
 import { AboutPage, ProjectDetailPage, ProjectsPage } from './components/Pages'
 
 export default function App() {
@@ -20,7 +19,6 @@ export default function App() {
     <Navbar />
     {page ?? <main id="top" className="relative z-[1]">
       <Hero />
-      <Chatbot />
       <Projects />
       <TechStack />
       <section id="about" className="mx-auto grid max-w-6xl gap-12 border-t border-white/10 px-6 py-24 lg:grid-cols-[1fr_1.4fr]">

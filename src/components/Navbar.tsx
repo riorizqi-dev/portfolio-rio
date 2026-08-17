@@ -11,6 +11,10 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const path = window.location.pathname.replace(/\/$/, '') || '/'
+  const hash = window.location.hash
+
+  const isActive = (href: string) => href === '/#contact' ? path === '/' && hash === '#contact' : path === href
 
   const handleClick = (href: string) => {
     setOpen(false)
@@ -23,7 +27,7 @@ export default function Navbar() {
       className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#050505]/75 backdrop-blur-xl"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="/" className="font-mono text-sm font-bold tracking-tight text-white hover:text-[#00ff88] transition-colors">
+          <a href="/" className="inline-flex h-8 items-center font-mono text-sm font-bold leading-none tracking-tight text-white hover:text-[#00ff88] transition-colors">
           RIO<span className="text-[#00ff88]">.</span>
         </a>
 
@@ -32,15 +36,15 @@ export default function Navbar() {
             <button
               key={l.href}
               onClick={() => handleClick(l.href)}
-              className="font-mono text-xs uppercase text-[#888] hover:text-[#00ff88] transition-colors cursor-pointer"
+              className={`inline-flex h-8 items-center font-mono text-xs uppercase leading-none transition-colors cursor-pointer ${isActive(l.href) ? 'text-[#00ff88]' : 'text-[#888] hover:text-[#00ff88]'}`}
             >
-              <span className="text-[#555]">~/</span>{l.label.toLowerCase()}
+              <span className={isActive(l.href) ? 'text-[#00ff88]' : 'text-[#555]'}>~/</span>{l.label.toLowerCase()}
             </button>
           ))}
         </div>
 
         <button
-          className="md:hidden p-1 text-neutral-400 hover:text-white transition-colors cursor-pointer"
+          className="md:hidden inline-flex h-8 w-8 items-center justify-center text-neutral-400 hover:text-white transition-colors cursor-pointer"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
