@@ -2,6 +2,8 @@
 
 Personal portfolio of **Rio Rizqi Saputra** — Website Engineer & Full Stack Developer. Built with React 19 + TypeScript + Vite + Tailwind CSS.
 
+**Live:** [https://portfolio-rio-green.vercel.app](https://portfolio-rio-green.vercel.app)
+
 ## Sections
 
 - Hero with status badge & social links
